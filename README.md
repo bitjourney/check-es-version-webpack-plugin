@@ -28,6 +28,16 @@ if (productionMode) {
 // ...
 ```
 
+## Install
+
+This is published to npmjs.com:
+
+https://www.npmjs.com/package/@bitjourney/check-es-version-webpack-plugin
+
+```
+npm install @bitjourney/check-es-version-webpack-plugin
+```
+
 ## How to check the ES version
 
 This module uses [acorn](https://github.com/acornjs/acorn) to parse sources with a specified ES version.
