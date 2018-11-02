@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Webpack plugin to ensure the output results are valid in the specified ES version",
   "main": "index.js",
-  "engines": {
-    "node": ">= 8"
-  },
   "keywords": [
     "webpack",
     "ES5",
@@ -21,7 +18,14 @@
       "email": "goro-fuji@bitjourney.com"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitjourney/check-es-version-webpack-plugin.git"
+  },
   "license": "ISC",
+  "engines": {
+    "node": ">= 8"
+  },
   "dependencies": {
     "acorn": ">= 6"
   },
