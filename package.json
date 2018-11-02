@@ -1,0 +1,26 @@
+{
+  "name": "validate-es5-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Ensure all the sources are made of ES5 in webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributors": [
+    {
+      "name": "FUJI Goro",
+      "email": "goro-fuji@bitjourney.com"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "acorn": ">= 6"
+  },
+  "peerDependencies": {
+    "webpack": ">= 4"
+  },
+  "devDependencies": {
+    "memory-fs": "^0.4.1",
+    "webpack": ">= 4"
+  }
+}
