@@ -10,7 +10,7 @@
     "Internet Explorer"
   ],
   "scripts": {
-    "test": "node test/run.test.js"
+    "test": "node test/es5.test.js && node test/es2015.test.js"
   },
   "contributors": [
     {
