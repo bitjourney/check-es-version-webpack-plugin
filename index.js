@@ -35,14 +35,11 @@ class CheckEsVersionPlugin {
   }
 
   buildError({ err, source, filename }) {
-    const { line, column } = err.loc;
-    const sourceLine = source.split(/\n/)[line - 1];
-    const marker = new Array(column + 1).fill(' ');
-    marker[column] = '^';
-
-    return new SyntaxError(`Invalid ES${this.esVersion} at ${filename}: ${err}\n${sourceLine}\n${marker}`)
+    return new SyntaxError(`Invalid ES${this.esVersion} at ${filename}: ${err}`);
   }
 }
 
-module.exports = CheckEsVersionPlugin;
+module.exports = CheckEsVersionPlugin; // not recommended
+
+// `const { CheckEsVersionPlugin } = require("@bitjourney/check-es-version-webpack-plugin")` is recommended:
 module.exports.CheckEsVersionPlugin = CheckEsVersionPlugin;
