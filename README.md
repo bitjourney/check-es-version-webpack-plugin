@@ -1,15 +1,15 @@
 # check-es-version-webpack-plugin [![Build Status](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin.svg?branch=master)](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin)
 
-If your project supports IE11, you have to ensure your JavaScript bundles does not include ES2015+ syntax such as classes, async/await, and so on.
+This plugin checks if the ES version of the webpack outputs is compatible with the specified version.
 
-This plugin checks the ES version of the webpack outputs for classic JS engines.
+For example, if your project supports IE11, which supports up to ES5, you have to ensure your JavaScript bundles does not include ES2015+ syntax such as classes, async/await, and so on.
 
 ## SYNOPSIS
 
 ```js
 // in webpack.config.js
 
-const { CheckEsVersionPlugin } = require("check-es-version-webpack-plugin");
+const { CheckEsVersionPlugin } = require("@bitjourneycheck-es-version-webpack-plugin");
 
 const config = {
   // ...
@@ -18,9 +18,11 @@ const config = {
 if (productionMode) {
   // this plugin works only for production mode,
   // because webpack wraps the input with eval() in development mode.
-  config.plugins.push(new CheckEsVersionPlugin({
-    esVersion: 5, // optional; 5 by default
-  });
+  config.plugins.push(
+    new CheckEsVersionPlugin({
+      esVersion: 5,
+    }),
+  ;
 }
 
 // ...
@@ -30,7 +32,7 @@ if (productionMode) {
 
 This module uses [acorn](https://github.com/acornjs/acorn) to parse sources with a specified ES version.
 
-That is, `acorn.parse(source, { ecmaVersion: 5 })` throws `SyntaxError` if the `source` includes ES2015 syntax like classes.
+That is, `acorn.parse(source, { ecmaVersion: 5 })` throws `SyntaxError` if the `source` includes ES2015 syntax.
 
 ## LICENSE
 
