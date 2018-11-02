@@ -9,7 +9,7 @@ For example, if your project supports IE11, which supports up to ES5, you have t
 ```js
 // in webpack.config.js
 
-const { CheckEsVersionPlugin } = require("@bitjourneycheck-es-version-webpack-plugin");
+const { CheckEsVersionPlugin } = require("@bitjourney/check-es-version-webpack-plugin");
 
 const config = {
   // ...
