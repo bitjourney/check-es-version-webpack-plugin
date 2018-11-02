@@ -1,6 +1,8 @@
 # check-es-version-webpack-plugin [![Build Status](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin.svg?branch=master)](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin)
 
-If your project supports IE11, you have to ensure your JavaScript bundles does not include ES2015+ syntax such as classes, async/await,
+If your project supports IE11, you have to ensure your JavaScript bundles does not include ES2015+ syntax such as classes, async/await, and so on.
+
+This plugin checks the ES version of the webpack outputs for classic JS engines.
 
 ## SYNOPSIS
 
