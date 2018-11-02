@@ -1,6 +1,6 @@
 # check-es-version-webpack-plugin [![Build Status](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin.svg?branch=master)](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin)
 
-This plugin checks if the ES version of the webpack outputs is compatible with the specified version.
+This plugin checks if the ES version of the webpack outputs is compatible with the specified version of ES.
 
 For example, if your project supports IE11, which supports up to ES5, you have to ensure your JavaScript bundles does not include ES2015+ syntax such as classes, async/await, and so on.
 
@@ -38,7 +38,7 @@ https://www.npmjs.com/package/@bitjourney/check-es-version-webpack-plugin
 npm install @bitjourney/check-es-version-webpack-plugin
 ```
 
-## How to check the ES version
+## How it works
 
 This module uses [acorn](https://github.com/acornjs/acorn) to parse sources with a specified ES version.
 
