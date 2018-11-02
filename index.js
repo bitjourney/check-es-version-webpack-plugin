@@ -9,7 +9,7 @@ class CheckEsVersionPlugin {
     compiler.hooks.emit.tap("CheckEsVersionPlugin", (compilation) => {
       for (const [filename, asset] of Object.entries(compilation.assets)) {
 
-        if (!/\.js/.test(filename)) {
+        if (!/\.js$/.test(filename)) {
           continue;
         }
 
