@@ -12,3 +12,7 @@ install:
 cache:
   directories:
     - node_modules
+
+matrix:
+  allow_failures:
+    - node_js: "node"
