@@ -2,7 +2,7 @@
 
 const MemoryFs = require("memory-fs");
 const webpack = require("webpack");
-const ValidateEs5Plugin = require("..");
+const { CheckEsVersionPlugin } = require("..");
 
 function createCompiler(options = {}) {
   const compiler = webpack(
@@ -29,17 +29,20 @@ function createCompiler(options = {}) {
 
 const compiler = createCompiler({
   plugins: [
-    new ValidateEs5Plugin(),
+    new CheckEsVersionPlugin({
+      esVersion: 5,
+    }),
   ],
 })
 
 compiler.run((err, stats) => {
+  if (err) {
+    throw err;
+  }
+
   if (stats.compilation.errors) {
     console.error("not ok:", stats.compilation.errors.map((err) => err.toString()).join(" "));
   } else {
-    if (err) {
-      throw err;
-    }
     console.error("no syntax errors occur.")
     process.abort();
   }
