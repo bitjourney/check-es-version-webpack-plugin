@@ -21,18 +21,23 @@ class ValidateEs5WebpackPlugin {
           });
         } catch (err) {
           if (err instanceof SyntaxError) {
-            const { line, column } = err.loc;
-            const sourceLine = source.split(/\n/)[line - 1];
-            const marker = new Array(column + 1).fill(' ');
-            marker[column] = '^';
-
-            compilation.errors.push(new SyntaxError(`Invalid ES${this.esVersion} at ${filename}: ${err}\n${sourceLine}\n${marker}`));
+            compilation.errors.push(this.buildError(err));
           } else {
             compilation.errors.push(err);
           }
         }
       }
     });
+  }
+
+  buildError(err) {
+    const { line, column } = err.loc;
+    const sourceLine = source.split(/\n/)[line - 1];
+    const marker = new Array(column + 1).fill(' ');
+    marker[column] = '^';
+
+
+    return new SyntaxError(`Invalid ES${this.esVersion} at ${filename}: ${err}\n${sourceLine}\n${marker}`)
   }
 }
 

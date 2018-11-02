@@ -1,0 +1,14 @@
+dist: trusty
+sudo: false
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"
+
+install:
+  - npm install -g npm
+  - npm ci
+
+cache:
+  directories:
+    - node_modules
