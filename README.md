@@ -44,6 +44,10 @@ This module uses [acorn](https://github.com/acornjs/acorn) to parse sources with
 
 That is, `acorn.parse(source, { ecmaVersion: 5 })` throws `SyntaxError` if the `source` includes ES2015 syntax.
 
+## Related Tools
+
+* https://www.npmjs.com/package/es-check
+
 ## LICENSE
 
 ISC License
