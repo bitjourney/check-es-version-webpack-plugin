@@ -1,4 +1,4 @@
-# check-es-version-webpack-plugin ![npm version](https://img.shields.io/npm/v/@bitjourney/check-es-version-webpack-plugin.svg) [![Build Status](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin.svg?branch=master)](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin)
+# check-es-version-webpack-plugin [![npm version](https://img.shields.io/npm/v/@bitjourney/check-es-version-webpack-plugin.svg)](https://www.npmjs.com/package/@bitjourney/check-es-version-webpack-plugin) [![Build Status](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin.svg?branch=master)](https://travis-ci.org/bitjourney/check-es-version-webpack-plugin)
 
 This plugin checks if the ES version of the webpack outputs is compatible with the specified version of ES.
 
