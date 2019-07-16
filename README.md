@@ -13,6 +13,8 @@ const { CheckEsVersionPlugin } = require("@bitjourney/check-es-version-webpack-p
 
 const config = {
   // ...
+
+  plugins: [ /* ... */ ],
 };
 
 if (productionMode) {
